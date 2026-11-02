@@ -1,0 +1,34 @@
+name = "CutQueryComplexity"
+version = "0.1.0"
+description = "Deterministic, randomized, and quantum cut-query complexity"
+license = "Apache-2.0"
+homepage = "https://github.com/troyjlee/cut-query-complexity"
+keywords = ["cut-query", "minimum-cut", "query-complexity", "graph-algorithms", "formalization", "mathlib"]
+defaultTargets = ["CutQueryComplexity", "CutQueryComplexityChecks", "SLT"]
+
+[[require]]
+name = "QuantumQueryComplexity"
+git = "https://github.com/troyjlee/quantum-query-complexity"
+rev = "v0.1.0"
+
+[[lean_lib]]
+name = "CutQueryComplexity"
+
+[lean_lib.leanOptions]
+autoImplicit = false
+
+[[lean_lib]]
+name = "CutQueryComplexityChecks"
+globs = ["CutQueryComplexityChecks.*"]
+
+[lean_lib.leanOptions]
+autoImplicit = false
+
+[[lean_lib]]
+name = "SLT"
+# The vendored files have no root module; the glob lists every module.
+roots = []
+globs = ["SLT.+"]
+
+[lean_lib.leanOptions]
+autoImplicit = false

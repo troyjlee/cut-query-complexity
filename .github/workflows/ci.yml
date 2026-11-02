@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the library, the checks, and SLT
+        uses: leanprover/lean-action@v1
+      - name: Audit axioms of the core library
+        run: lake env lean --trust=0 CutQueryComplexityChecks.lean
+      - name: Audit axioms of the endpoint modules
+        run: lake env lean --trust=0 CutQueryComplexityChecks/Endpoints.lean
+      - name: Run the SMAWK and two-respecting regression checks
+        run: |
+          for test in tests/smawk/SMAWKCheck.lean tests/two-respecting/TreeCoverCheck.lean tests/two-respecting/TwoRespectingCheck.lean; do
+            lake env lean "$test"
+          done
+      - name: Check use from a separate Lake project
+        run: python3 scripts/check-downstream.py
+      - name: Check that the audit rejects forbidden axioms
+        run: python3 scripts/check-axiom-audit.py

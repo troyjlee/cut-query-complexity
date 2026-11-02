@@ -1,0 +1,53 @@
+--- a/SLT/MatrixInfra/Basic.lean	2026-10-05 22:06:30
++++ b/SLT/MatrixInfra/Basic.lean	2026-10-05 22:08:17
+@@ -282,6 +282,7 @@
+   intro i j
+   by_cases hij : i = j
+   · subst j
++    rw [if_pos rfl]
+     simp [A.norm_leftSingularVector_of_singularValues_ne_zero i.property,
+       inner_self_eq_norm_sq_to_K]
+   · have hne : (i : Fin (Fintype.card n)) ≠ (j : Fin (Fintype.card n)) := by
+--- a/SLT/MatrixInfra/MatCalc.lean	2026-10-05 22:06:30
++++ b/SLT/MatrixInfra/MatCalc.lean	2026-10-05 22:11:52
+@@ -77,7 +77,7 @@
+ theorem rayleighQuotient_mono_of_le {A B : E →ₗ[ℝ] E} (hAB : A ≤ B) {x : E}
+     (hx : x ≠ 0) :
+     rayleighQuotient A x ≤ rayleighQuotient B x := by
+-  have hpos : (B - A).IsPositive := (LinearMap.le_def A B).mp hAB
++  have hpos : (B - A).IsPositive := LinearMap.le_def.mp hAB
+   have hinner : 0 ≤ inner ℝ ((B - A) x) x := hpos.inner_nonneg_left x
+   have hden : 0 < ‖x‖ ^ 2 := sq_pos_of_pos (norm_pos_iff.mpr hx)
+   unfold rayleighQuotient
+@@ -114,8 +114,7 @@
+ -/
+ noncomputable def realMatrixToCStarMatrixStarAlgHom :
+     Matrix n n ℝ →⋆ₐ[ℝ] CStarMatrix n n ℂ :=
+-  (((CStarMatrix.ofMatrixStarAlgEquiv (n := n) (A := ℂ) :
+-      Matrix n n ℂ →⋆ₐ[ℂ] CStarMatrix n n ℂ).restrictScalars ℝ).comp
++  (((CStarMatrix.ofMatrixStarAlgEquiv (n := n) (A := ℂ)).toStarAlgHom.restrictScalars ℝ).comp
+     (realMatrixToComplexMatrixStarAlgHom (n := n)))
+ 
+ /-- Positive semidefiniteness reflects from the complexification back to the real matrix. -/
+@@ -794,6 +793,7 @@
+   have hden : d i + t * e j ≠ 0 := by
+     exact ne_of_gt (add_pos_of_pos_of_nonneg (hd i) (mul_nonneg ht (le_of_lt (he j))))
+   simp [W, Matrix.diagonal_mul, Matrix.mul_diagonal, div_eq_mul_inv]
++  erw [Matrix.diagonal_mul, Matrix.mul_diagonal]
+   calc
+     d i * (Y i j * (d i + t * e j)⁻¹) +
+         t * (Y i j * (d i + t * e j)⁻¹ * e j) =
+--- a/SLT/RMT/MatBern.lean	2026-10-05 22:06:30
++++ b/SLT/RMT/MatBern.lean	2026-10-05 22:15:20
+@@ -934,9 +934,9 @@
+   haveI : ∀ i, IsProbabilityMeasure (μs i) := by
+     intro i
+     dsimp [μs]
+-    exact Measure.isProbabilityMeasure_map (hX_ae i)
++    infer_instance
+   have hφ : AEMeasurable φ μ :=
+-    aemeasurable_pi_lambda _ hX_ae
++    AEMeasurable.of_eval hX_ae
+   have hmap_eq : μ.map φ = Measure.pi μs := by
+     unfold MatrixBernsteinIndependent at h_independent
+     simpa [φ, μs, Mat] using

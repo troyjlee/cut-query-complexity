@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this library, please cite it using this metadata and the release or commit used."
+title: "Cut query complexity in Lean"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Lee
+    given-names: Troy
+    orcid: "https://orcid.org/0000-0001-6912-2338"
+    affiliation: "University of Technology Sydney"
+license: Apache-2.0
+repository-code: "https://github.com/troyjlee/cut-query-complexity"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formalized mathematics
+  - cut queries
+  - minimum cut
+  - query complexity
+  - graph algorithms
+  - quantum algorithms
+abstract: >-
+  A Lean library for deterministic, randomized, and quantum algorithms that
+  access a graph only through cut queries. It proves query bounds for weighted
+  cut sparsification, randomized, deterministic, and quantum global minimum
+  cut, minimum-cut certificates, all-pairs minimum cuts and Gomory–Hu
+  reductions, and directed minimum cuts and certificates. Every algorithm is an
+  explicit query program whose budget, error probability, and output contract
+  are proved, and an axiom audit checks each audited declaration.
