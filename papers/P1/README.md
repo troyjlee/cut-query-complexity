@@ -1,6 +1,6 @@
 # Paper 1 in Lean: the headline theorems
 
-**Paper:** [*Finding and Certifying Weighted Minimum Cuts with Cut Queries*](finding-certifying-weighted-minimum-cuts.pdf) (PDF in this folder).
+**Paper:** [*Finding and Certifying Weighted Minimum Cuts with Cut Queries*](finding-certifying-weighted-minimum-cuts.pdf) (PDF in this folder; also [arXiv:2611.03107](https://arxiv.org/abs/2611.03107)).
 
 This page shows the Lean statements of the paper's four headline theorems and explains how to
 read them. You do not need to read any Lean proofs. Lean's kernel checks those, so what matters

@@ -215,8 +215,8 @@ unrestricted cells: the program depends on `W`, and the bound grows with `log W`
 
 Preprints in [`papers/`](../papers):
 
-- [P1] *Finding and Certifying Weighted Minimum Cuts with Cut Queries*;
-  [PDF](../papers/P1/finding-certifying-weighted-minimum-cuts.pdf).
+- [P1] T. Lee. *Finding and Certifying Weighted Minimum Cuts with Cut Queries*;
+  [arXiv:2611.03107](https://arxiv.org/abs/2611.03107); [PDF](../papers/P1/finding-certifying-weighted-minimum-cuts.pdf).
 - [P2] *Deterministic s–t and All-Pairs Minimum Cuts with Subquadratic Cut
   Queries*; [PDF](../papers/P2/deterministic-st-all-pairs-minimum-cuts.pdf).
 - [P3] *Directed Cut Certificates through Fractional Forests and Shared Flows*;

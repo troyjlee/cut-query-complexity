@@ -176,7 +176,9 @@ sparsifier. The checks files restate many more intermediate endpoints.
 
 ### References
 
-- \[P1\]–\[P4\]: the [papers](#papers) in [`papers/`](papers).
+- \[P1\] T. Lee. Finding and certifying weighted minimum cuts with cut
+  queries; [arXiv:2611.03107](https://arxiv.org/abs/2611.03107).
+- \[P2\]–\[P4\]: the [papers](#papers) in [`papers/`](papers).
 - \[AEG+22\] S. Apers, Y. Efron, P. Gawrychowski, T. Lee, S. Mukhopadhyay, and
   D. Nanongkai. Cut query algorithms with star contraction. FOCS 2022;
   [arXiv:2201.05674](https://arxiv.org/abs/2201.05674).
@@ -202,7 +204,7 @@ sparsifier. The checks files restate many more intermediate endpoints.
   complexity of approximating max-cut. ICALP 2024;
   [arXiv:2211.04506](https://arxiv.org/abs/2211.04506).
 
-[P1]: papers/P1/finding-certifying-weighted-minimum-cuts.pdf
+[P1]: https://arxiv.org/abs/2611.03107
 [P2]: papers/P2/deterministic-st-all-pairs-minimum-cuts.pdf
 [P3]: papers/P3/directed-cut-certificates.pdf
 [P4]: papers/P4/subquadratic-directed-minimum-cuts.pdf
@@ -226,7 +228,7 @@ Lean can check them against the paper, together with a file that checks them.
 
 | | Paper | Lean reader |
 | --- | --- | --- |
-| P1 | [Finding and Certifying Weighted Minimum Cuts with Cut Queries](papers/P1/finding-certifying-weighted-minimum-cuts.pdf) | [P1 in Lean](papers/P1) |
+| P1 | [Finding and Certifying Weighted Minimum Cuts with Cut Queries](papers/P1/finding-certifying-weighted-minimum-cuts.pdf); [arXiv:2611.03107](https://arxiv.org/abs/2611.03107) | [P1 in Lean](papers/P1) |
 | P2 | [Deterministic s–t and All-Pairs Minimum Cuts with Subquadratic Cut Queries](papers/P2/deterministic-st-all-pairs-minimum-cuts.pdf) | [P2 in Lean](papers/P2) |
 | P3 | [Directed Cut Certificates through Fractional Forests and Shared Flows](papers/P3/directed-cut-certificates.pdf) | [P3 in Lean](papers/P3) |
 | P4 | [Subquadratic Cut-Query Algorithms for Directed Minimum Cuts](papers/P4/subquadratic-directed-minimum-cuts.pdf) | [P4 in Lean](papers/P4) |
