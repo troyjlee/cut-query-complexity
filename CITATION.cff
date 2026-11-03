@@ -3,6 +3,15 @@ message: "If you use this library, please cite it using this metadata and the re
 title: "Cut query complexity in Lean"
 type: software
 version: 0.1.0
+doi: 10.5281/zenodo.23885654
+date-released: 2026-11-02
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23885654
+    description: "Version 0.1.0, archived on Zenodo"
+  - type: doi
+    value: 10.5281/zenodo.23885653
+    description: "Concept DOI: resolves to the latest version"
 authors:
   - family-names: Lee
     given-names: Troy

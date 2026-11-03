@@ -1,6 +1,7 @@
 # Cut query complexity in Lean
 
 [![CI](https://github.com/troyjlee/cut-query-complexity/actions/workflows/ci.yml/badge.svg)](https://github.com/troyjlee/cut-query-complexity/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23885653.svg)](https://doi.org/10.5281/zenodo.23885653)
 
 A Lean library for deterministic, randomized, and quantum algorithms that access
 a graph only through cut queries: the algorithm names a vertex set `S` and
@@ -298,6 +299,9 @@ clone takes about 35 minutes on a 30-core machine.
 The code is under the Apache License 2.0. The PDFs in `papers/` are not
 covered by it; see [papers/README.md](papers/README.md). Formalization by Troy
 Lee, with AI-assisted development using Claude and Codex.
-[CITATION.cff](CITATION.cff) provides citation metadata;
-[docs/COVERAGE.md](docs/COVERAGE.md) and the papers credit the underlying
-mathematical sources.
+[CITATION.cff](CITATION.cff) provides citation metadata. Each release is
+archived on Zenodo: version 0.1.0 is
+[doi:10.5281/zenodo.23885654](https://doi.org/10.5281/zenodo.23885654), and
+[doi:10.5281/zenodo.23885653](https://doi.org/10.5281/zenodo.23885653)
+resolves to the latest version. [docs/COVERAGE.md](docs/COVERAGE.md) and the
+papers credit the underlying mathematical sources.
