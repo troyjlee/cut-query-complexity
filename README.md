@@ -302,7 +302,9 @@ The code is under the Apache License 2.0. The PDFs in `papers/` are not
 covered by it; see [papers/README.md](papers/README.md). Formalization by Troy
 Lee, with AI-assisted development using Claude and Codex.
 [CITATION.cff](CITATION.cff) provides citation metadata. Each release is
-archived on Zenodo: version 0.1.0 is
+archived on Zenodo: version 0.1.1 is
+[doi:10.5281/zenodo.23938936](https://doi.org/10.5281/zenodo.23938936),
+version 0.1.0 is
 [doi:10.5281/zenodo.23885654](https://doi.org/10.5281/zenodo.23885654), and
 [doi:10.5281/zenodo.23885653](https://doi.org/10.5281/zenodo.23885653)
 resolves to the latest version. [docs/COVERAGE.md](docs/COVERAGE.md) and the
