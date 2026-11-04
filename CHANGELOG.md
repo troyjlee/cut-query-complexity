@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- `CutQueryComplexity.Model.Complexity` imports `Mathlib.Order.Lattice.Nat`
+  in place of `Mathlib.Data.Nat.Lattice`, which this Mathlib deprecates as an
+  empty shim. No statement or proof changes.
+
 ## 0.1.0
 
 - First public release of the `CutQueryComplexity` library.

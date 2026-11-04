@@ -239,7 +239,7 @@ are verified in Lean 4 and whose prose proofs their author has not yet reviewed;
 
 ## Use in another Lean project
 
-Version `0.1.0` uses Lean **4.35.0-rc2**, Mathlib commit
+Version `0.1.1` uses Lean **4.35.0-rc2**, Mathlib commit
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`, and QuantumQueryComplexity `v0.1.0`.
 Add this dependency to your `lakefile.toml`:
 
@@ -247,7 +247,7 @@ Add this dependency to your `lakefile.toml`:
 [[require]]
 name = "CutQueryComplexity"
 git = "https://github.com/troyjlee/cut-query-complexity"
-rev = "v0.1.0"
+rev = "v0.1.1"
 ```
 
 Then run `lake update` and `lake exe cache get`. `import CutQueryComplexity`

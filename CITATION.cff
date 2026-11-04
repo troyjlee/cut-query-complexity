@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this library, please cite it using this metadata and the release or commit used."
 title: "Cut query complexity in Lean"
 type: software
-version: 0.1.0
-doi: 10.5281/zenodo.23885654
-date-released: 2026-11-02
+version: 0.1.1
+doi: 10.5281/zenodo.23885653
+date-released: 2026-11-04
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23885654

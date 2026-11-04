@@ -1,6 +1,6 @@
 import CutQueryComplexity.Model.Randomized
 import Mathlib.Order.ConditionallyCompleteLattice.Basic
-import Mathlib.Data.Nat.Lattice
+import Mathlib.Order.Lattice.Nat
 
 /-! # Relational query complexity, with infinity for unsolvable problems -/
 
