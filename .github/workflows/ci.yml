@@ -20,7 +20,7 @@ jobs:
     env:
       LEAN_NUM_THREADS: "1"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build the library, the checks, and SLT
         uses: leanprover/lean-action@v1
       - name: Audit axioms of the core library
